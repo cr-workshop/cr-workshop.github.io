@@ -13,6 +13,8 @@
 		$main = $('#main');
 		$teaser = $('#teaser');
 		$blurb = $('.blurb');
+		$intro = $('#intro');
+		$posts = $('#posts');
 
 	// Breakpoints.
 		breakpoints({
@@ -83,17 +85,20 @@
 			});
 
 	// Intro.
-		var $intro = $('#intro');
+
 
 		// Move to main on <=large, back to sidebar on >large.
 			breakpoints.on('<=large', function() {
 				$intro.prependTo($teaser);
 				$teaser.prependTo($blurb);
-				$blurb.prependTo($main);
+				$posts.appendTo($blurb);
 			});
 
 			breakpoints.on('>large', function() {
 				$intro.prependTo($sidebar);
+				$teaser.prependTo($posts);
+				$posts.appendTo($main);
 			});
+
 
 })(jQuery);

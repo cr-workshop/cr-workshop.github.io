@@ -2622,6 +2622,8 @@ input, select, textarea {
 					margin-bottom: 0;
 				}
 
+		
+
 /* Mini Post */
 
 	.mini-post {
@@ -2686,6 +2688,10 @@ input, select, textarea {
 				position: absolute;
 				right: 2em;
 				top: 2em;
+			}
+
+			.mini-post header ul {
+				font-size: 0.9em;
 			}
 
 	.mini-posts {
@@ -2953,7 +2959,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.post {
-				padding: 1.5em 1.5em 0.1em 1.5em ;
+				padding: 1.5em 3em 0.1em 3em ;
 				left: -1.5em;
 				margin: 0 0 2em 0;
 				width: calc(100% + (1.5em * 2));
