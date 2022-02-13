@@ -11,6 +11,8 @@
 		$menu = $('#menu'),
 		$sidebar = $('#sidebar'),
 		$main = $('#main');
+		$teaser = $('#teaser');
+		$blurb = $('.blurb');
 
 	// Breakpoints.
 		breakpoints({
@@ -85,7 +87,9 @@
 
 		// Move to main on <=large, back to sidebar on >large.
 			breakpoints.on('<=large', function() {
-				$intro.prependTo($main);
+				$intro.prependTo($teaser);
+				$teaser.prependTo($blurb);
+				$blurb.prependTo($main);
 			});
 
 			breakpoints.on('>large', function() {
