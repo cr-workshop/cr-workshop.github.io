@@ -3616,3 +3616,8 @@ input, select, textarea {
 			}
 
 		}
+.tinystuff {
+    font-family: system-ui; 
+    font-weight: 200; 
+    font-size: smaller;
+}
